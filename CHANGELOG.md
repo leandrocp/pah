@@ -28,6 +28,7 @@
 - Add app.pt-BR.yml file for app specific locale strings
 - Add spec file to test all factories
 - Add Rack::Timeout
+- It's possible to install pah in a existing project
 
 ### bug fixes
 

@@ -1,7 +1,7 @@
 puts "Setting up ruby env ... ".magenta
 
 current_ruby = 'ruby-2.1.0'
-current_gemset = @app_name
+current_gemset = app_name
 
 copy_static_file '.ruby-version'
 gsub_file '.ruby-version', /RUBY_VERSION/, current_ruby

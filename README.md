@@ -17,9 +17,13 @@ If using [RVM see this tips](https://github.com/Helabs/pah/wiki/Using-Pah-with-R
 
 Run:
 
-    pah projectname
+    pah new projectname
 
-This will create a Rails 4.0 app in `projectname` with ruby 2.1.0. This script creates a new git repository. It is not meant to be used against an existing repo.
+This will create a Rails 4.0 app in `projectname` with ruby 2.1.0. This script creates a new git repository.
+
+For existing rails applications, you can run:
+
+    pah install
 
 ### RVM
 
