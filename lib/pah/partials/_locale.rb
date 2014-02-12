@@ -1,8 +1,8 @@
-copy_static_file 'config/locales/pt-BR.yml'
-copy_static_file 'config/locales/app.pt-BR.yml'
+copy_static_file 'config/locales/br.yml'
+copy_static_file 'config/locales/app.br.yml'
 
 git add: 'config/locales/*.yml'
-git_commit 'Add pt-BR locale files.'
+git_commit 'Add br locale files.'
 
 time_zone_config = <<TIME_ZONE
 
@@ -16,8 +16,8 @@ end
 locale_config = <<LOCALE
 
     config.i18n.enforce_available_locales = true
-    config.i18n.default_locale = :"pt-BR"
-    config.i18n.locale = :"pt-BR"
+    config.i18n.default_locale = :br
+    config.i18n.locale = :br
 LOCALE
 
 in_root do
