@@ -24,10 +24,11 @@
 - Change foreman port to 3000
 - Add pah version to commit messages
 - Don't use ```git add --all``, rather explicitly add files to git
-- Update pt-BR.yml file from rails-i18n project
-- Add app.pt-BR.yml file for app specific locale strings
 - Add Rack::Timeout
 - Use FactoryGirl.lint to test all factories before running specs
+- Update br.yml file from rails-i18n project
+- Add app.br.yml file for app specific locale strings
+- Change default locale to :br
 
 ### bug fixes
 
