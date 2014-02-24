@@ -1,5 +1,5 @@
 class HerokuApp < Rails::Generators::AppGenerator
-  DEFAULT_ADDONS = %w(pgbackups:auto-month loggly:mole sendgrid:starter rollbar)
+  DEFAULT_ADDONS = %w(pgbackups:auto-month loggly:mole sendgrid:starter rollbar memcachier:dev)
 
   attr_reader :name, :description, :config
 
@@ -11,6 +11,7 @@ class HerokuApp < Rails::Generators::AppGenerator
     add_secret_token
     add_timezone_config
     add_addons
+    enable_user_env_compile
     add_heroku_git_remote
     add_rollbar_initialize_file
     check_canonical_domain
@@ -19,6 +20,12 @@ class HerokuApp < Rails::Generators::AppGenerator
 
   def add_addons
     DEFAULT_ADDONS.each { |addon| add_heroku_addon(addon) }
+  end
+
+  def enable_user_env_compile
+    say "Enabling user-env-compile for Heroku '#{name}.herokuapp.com'".magenta
+    say "This feature is experimental and is subject to change.".red
+    system "heroku labs:enable user-env-compile --app #{name}"
   end
 
   def add_secret_token

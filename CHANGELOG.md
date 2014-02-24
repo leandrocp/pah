@@ -33,6 +33,7 @@
 - Update rails version to ```4.0.3```
 - Run `rails generate simple_form:install`
 - Add gem bullet
+- Add assets compilation cache to speed up assets:precompile. Thanks to [Alex Maccaw](http://blog.alexmaccaw.com/faster-deploys)
 
 ### bug fixes
 
